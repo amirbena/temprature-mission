@@ -41,9 +41,7 @@ const writeNewBlockedCityToFile = async () => {
 const writeFileAsync = (filePath, content) => {
     return new Promise((resolve, reject) => {
         fs.writeFile(filePath, content, { encoding: "utf8" }, (err, result) => {
-            console.log(err, result)
             if (err) return reject(err);
-            console.log(result);
             resolve();
         })
     })
